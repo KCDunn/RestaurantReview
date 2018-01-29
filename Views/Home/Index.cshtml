@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "Add a Review";
+}
+@model RESTauranter.Models.Recensione
+<div id="main">
+    <div id="container">
+        <h1>Restaurant Review</h1>
+        <a href="/show"><button>See Reviews</button></a>
+        <h3>Create a New Review:</h3>
+        <div class="container">
+            <form asp-action="Create" asp-controller="Home" method="post">
+                <div class="row">
+                    <span asp-validation-for="name"></span>
+                    <div class="col-25">
+                        <label asp-for="name"></label>
+                    </div>
+                    <div class="col-75">
+                        <input class="form-control" asp-for="name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="restaurant"></span>
+                    <div class="col-25">
+                        <label asp-for="restaurant"></label>
+                    </div>
+                    <div class="col-75">
+                        <input class="form-control" asp-for="restaurant">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label asp-for="review"></label>
+                    </div>
+                    <div class="col-75">
+                        <textarea class="form-control" asp-for="review" rows="4" cols="50"></textarea>
+                    </div>
+                    <span asp-validation-for="review"></span>
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="visit"></span>
+                    <div class="col-25">
+                        <label asp-for="visit"></label>
+                    </div>
+                    <div class="col-75">
+                        <input class="form-control" asp-for="visit" type="date">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label asp-for="rating"></label>
+                    </div>
+                    <div class="col-75">
+                        <select asp-for="rating">
+                            @for(int val = 1; val < 6; val++)
+                            {
+                                <option value="@val">@val</option>
+                            }
+                        </select>
+                    </div>
+                    <span asp-validation-for="rating"></span>
+                </div>
+                <input type="submit" value="Submit">
+                
+            </form>
+            
+            
+        </div>
+    </div>
+</div>

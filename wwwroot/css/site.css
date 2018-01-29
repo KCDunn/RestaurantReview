@@ -1,0 +1,252 @@
+/*Write all of your CSS here*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(43, 38, 26);
+}
+h1{
+    font-family: 'Fugaz One', cursive;
+    font-size: 2.5em;
+    color: rgb(255, 225, 93);
+}
+h3{
+    text-decoration: underline;
+    color: white;
+}
+h1, h3{
+    text-align: center;
+    
+}
+
+/* form{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+} */
+.review{
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: rgb(255, 225, 93);
+    color: black;
+    padding: 2px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* float: right; */
+    font-weight: bold;
+    margin-top: 25px;
+    height: 30px;
+    box-shadow: 1px 1px 4px rgb(53, 53, 53);
+}
+
+input[type=submit]:hover {
+    background-color: rgb(230, 152, 50);
+}
+button {
+    background-color: rgb(255, 225, 93);
+    color: black;
+    padding: 2px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 30px;
+    box-shadow: 1px 1px 4px rgb(53, 53, 53);
+    margin: auto;
+}
+
+button:hover {
+    background-color: rgb(230, 152, 50);
+}
+
+.container {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 5px;
+}
+form{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px black;
+    font-size: 1.5em;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 2px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 2px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#reviews{
+    background-image: url('../images/bar.jpg');
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    overflow: scroll;
+}
+#reviews::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+#reviews::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#reviews::-webkit-scrollbar-thumb {
+  /* background-color: darkgrey;
+  outline: 1px solid slategrey; */
+  background-color: rgba(255, 225, 93, 0.7);
+  outline: 1px solid rgb(165, 165, 165);
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit], button {
+        width: 100%;
+    }
+    button{
+        margin-left: 0px;
+    }
+    input[type=submit]{
+        height: 30px;
+        margin-top: 10px;
+    }
+    #main{
+        height: 730px;
+        margin-top: 0;
+        background-image: url('../images/fancy_restaurant2.jpg');
+        background-repeat: no-repeat, repeat;
+        background-position: center;
+    }
+    #container{
+        height: 570px;
+        background: rgba(48, 42, 40, 0.8);
+    } 
+    h3{
+        padding-top: 10px;
+    }
+    
+    #reviews{
+        width: 100%;
+        height: 730px;
+    }
+    .review{
+        width: 95%;
+        background-color: rgba(248, 233, 185, 0.8);
+        margin: 10px auto;
+        padding: 5px;
+        border-radius: 6px;
+    }
+}
+
+@media (min-width: 601px) {
+    #main{
+        width: 600px;
+        max-width: 1020px;
+        height: 804px;
+        background-image: url('../images/fancy_restaurant2.jpg');
+        background-repeat: no-repeat, repeat;
+        background-position: center;
+        background-size: 1250px;
+        box-shadow: 2px 2px 5px black;
+        margin: auto;
+        padding: 5px;
+        
+    }
+    #container{
+        width: 590px;
+        height: 700px;
+        background: rgba(53, 47, 45, 0.7);
+        /* background: rgba(252, 229, 221, 0.7); */
+        padding: 5px;
+        margin: 25px auto;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px black;
+        border: 1px solid rgb(54, 45, 45);
+    }
+    h3{
+        padding-top: 25px;
+    }
+    h4{
+        padding-left: 10px;
+    }
+    p{
+        padding: 5px 20px 5px 35px;
+    }
+    .col-25{
+        width: 30%;
+    }
+    .col-75{
+        width: 50%;
+    }
+    button{
+        width: 150px;
+        margin-left: 175px;
+    }
+    input[type=submit] {
+        margin-left: 170px;
+    }
+    #reviews{
+        width: 80%;
+        max-width: 800px;
+        height: 730px;
+        background-size: 100%;
+        margin: auto;
+        padding: 30px;
+        box-shadow: 2px 2px 5px black;
+    }
+    .review{
+        width: 95%;
+        background-color: rgba(250, 242, 218, 0.8);
+        margin: 10px auto;
+        padding: 5px;
+        border-radius: 6px;
+    }
+}
+
+@media (min-width: 768px) {
+    #main{
+        width: 750px;
+    }
+}
+
+@media (min-width: 1020px) {
+    #reviews{
+        height: 804px;
+    }
+}

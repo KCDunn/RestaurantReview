@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Reviews";
+}
+@model RESTauranter.Models.Recensione
+
+<div id="reviews">
+    <a href="/"><button> Add a Review</button></a>
+@foreach (var rev in @ViewBag.Reviews)
+{
+    <div class="review">
+        <h4>Review for: @rev.restaurant        (@rev.rating stars) </h4>
+        
+        
+        <p>@rev.review</p>
+        <h4>Reviewer: @rev.name, @rev.visit.ToString("D")</h4>
+    </div>
+}
+</div>
